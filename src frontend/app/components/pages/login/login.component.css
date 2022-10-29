@@ -1,0 +1,12 @@
+img {
+  object-fit: cover;
+  height: 200px;
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: 30 round;
+}
+.full-width {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

@@ -1,0 +1,52 @@
+<mat-card>
+  <h1 class="text">Profile</h1>
+  <mat-card-content>
+    <div class="div bootstrap-wrapper">
+      <div class="container">
+        <div class="container text-center">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAAB1CAMAAAD6F8q+AAAAY1BMVEX///81NTXf398CAgIxMTFTU1P7+/slJSUhISEqKiotLS0/Pz/p6ekbGxuCgoLIyMjPz8/v7++IiIijo6OZmZljY2MWFha7u7sRERGOjo6wsLDX19f19fVzc3NqampaWlpHR0cEL68gAAAC4klEQVR4nO2bibaiMAxAaS10YRNB2YX//8pBRUcfPGjHYjxzcr/gnoakaRscB0EQBEEQBNEgqKu0jKIszWkC7TJHUrW+5IJzLgRnbhR70EY/2EdFqBh5wGRBsgDa6gl6Vpz8hHGSNdBmdyoiJ4JXSeFSaLcryfE0K3iVLFJovQHaTWP8hCjB0ybx54P8IDxAG/Zq2XBYxwhWsV2M8o1TDmmYinXDIWkA85oWOoZEHuEU25VUucPBQl1rhfkSaR9KUXcR4TKGsnW3EXWGUUw1Cs4DmKQ+rlbtv4gKwtD7vXuYIlsIxVqvKN5gPYRiHhooEglxmslMsoUIiHw5aFfFCzwGUIxQ0QKl0bfI9wCKer3iHQFxqI5NSjchEEfqwKR0KxfA0HH0G53hU4Q5B5qkNEhCDzugfkqzHuYKqvG1Qw0U52GX1i47BdQxNdA1lEDngoFUsx9TgGd9X+tsIDI4Q2evU3dUB3pZW62HmingO+9yLasZg6naT0TLjgxoX3khEwsVXBKIPnFCJX9NmrD7jicDJ2iL2YXk/BveC0bibrKSjLPoS5ZwJD6Kk2TjYjLFd6SsoZ0mNPnh7PNitwuZ22Z78OeWebyA0rqmNPlSPwRB/ge8FSDdmrqKzl3nrtB1bZYHAI23V0WsCKViGigeFn354a6MlkoY3YASJoVffe5KvimZ0fXn3VK4n3oKzH2jy89nyeL8if6sKZcOAmtIsv1CNsd/XcJxIcOtO/GgN8uSGcJtJ06S7m3Dre9PliebdNlySuvw3nf4YLtxjtjo7XQBttUTR6J/cbwG3yhlDlY+xBtikx07sBXmC9sMQNlcxG0eYgLfpiGRG3yNudmr5CrcfmfWGUzl6BBan9xJrBWcEWV9cie2sDm/wFzbkTYaENPDdndrNvKig/XqbTLDpoftfPFc2+livW30euuKvLSsaK/LQUVUfFPRtqF9RbGzju12jNrnK3/EQxAEQRAEQV74A3IrKkG/WyT4AAAAAElFTkSuQmCC"
+          />
+          <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>Username</td>
+                <td>{{ user.username }}</td>
+              </tr>
+              <tr>
+                <td>First Name</td>
+                <td>{{ user.firstName }}</td>
+              </tr>
+              <tr>
+                <td>Last Name</td>
+                <td>{{ user.lastName }}</td>
+              </tr>
+              <tr>
+                <td>Email-Id</td>
+                <td>{{ user.email }}</td>
+              </tr>
+              <tr>
+                <td>Mobile No.</td>
+                <td>{{ user.mobileNo }}</td>
+              </tr>
+              <tr>
+                <td>Password</td>
+                <td>{{ user.password }}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>{{ user.authorities[0].authority }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <button mat-raised-button color="primary">UPDATE</button>
+  </mat-card-actions>
+</mat-card>

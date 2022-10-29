@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon></mat-icon>
+  </a>
+  <span>Medicare</span>
+  <span class="example-spacer"></span>
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Home
+  </a>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/login'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Login
+  </a>
+  <a
+    *ngIf="!isLoggedIn"
+    [routerLink]="'/signup'"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Sign-Up
+  </a>
+
+  <a
+    *ngIf="isLoggedIn && user"
+    mat-icon-button
+    routerLink="/admin/profile"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    {{ user.username }}
+  </a>
+  <a
+    *ngIf="isLoggedIn"
+    mat-icon-button
+    routerLink="/cart-page"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Cart
+  </a>
+  <a
+    *ngIf="isLoggedIn"
+    (click)="logout()"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    Logout
+  </a>
+</mat-toolbar>

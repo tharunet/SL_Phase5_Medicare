@@ -1,0 +1,9 @@
+.col-md-6.offset-md-3 {
+  margin-top: 20px;
+  text-align: center;
+}
+img {
+  object-fit: initial;
+  height: 35rem;
+  width: 50rem;
+}

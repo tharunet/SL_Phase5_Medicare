@@ -1,0 +1,46 @@
+<app-search></app-search>
+<!-- <mat-card class="card">
+  <mat-list>
+    <mat-list-item *ngFor="let c of medicines">
+      <img [src]="c.image" />
+      <div mat-line>{{ c.image }}</div>
+      <div mat-line>Product Id:-{{ c.productId }}</div>
+      <div mat-line>Medicine Name:-{{ c.name }}</div>
+      <div mat-line>Price:-{{ c.price | currency: "INR" }}</div>
+      <div mat-line>Offer:- {{ c.offer }}</div>
+      <div mat-line>Seller Name:- {{ c.sellerName }}</div>
+      <div mat-line>Description:- {{ c.description }}</div>
+      <button mat-flat-button color="warn">Add To Cart</button>
+      <mat-divider></mat-divider> </mat-list-item></mat-list
+></mat-card> -->
+<ul>
+  <li
+    [routerLink]="'/user-dashboard/' + c.productId"
+    *ngFor="let c of medicines"
+  >
+    <a>
+      <img [src]="c.image" [alt]="c.name" />
+      <div class="content">
+        <div class="name">
+          {{ c.name }}
+        </div>
+
+        <div class="offer">
+          <span><b>Offer:</b> {{ c.offer }}</span>
+        </div>
+        <div class="sellerName">
+          <span><b>Seller Name:</b> {{ c.sellerName }}</span>
+        </div>
+        <div class="description">
+          <span><b>Description:</b> {{ c.description }}</span>
+        </div>
+        <div class="price">
+          <span><b>Price:</b> {{ c.price | currency: "INR" }} </span>
+        </div>
+        <!-- <button (click)="addToCart()" mat-flat-button color="warn">
+          Add to Cart
+        </button> -->
+      </div>
+    </a>
+  </li>
+</ul>

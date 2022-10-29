@@ -1,0 +1,44 @@
+<h1>All Medicines</h1>
+<mat-card class="card">
+  <mat-list>
+    <mat-list-item *ngFor="let c of medicines">
+      <div mat-line>{{ c.image }}</div>
+      <div mat-line>Product Id:-{{ c.productId }}</div>
+      <div mat-line>Medicine Name:-{{ c.name }}</div>
+      <div mat-line>Price:-{{ c.price | currency: "INR" }}</div>
+      <div mat-line>Offer:- {{ c.offer }}</div>
+      <div mat-line>Seller Name:- {{ c.sellerName }}</div>
+      <div mat-line>Description:- {{ c.description }}</div>
+      <mat-card-actions>
+        <button
+          mat-flat-button
+          color="warn"
+          (click)="deleteMedicine(c.productId)"
+        >
+          Delete
+        </button>
+        <button
+          [routerLink]="'/admin/view/' + c.productId"
+          mat-flat-button
+          color="primary"
+        >
+          Update
+        </button>
+      </mat-card-actions>
+      <!-- <div mat-line>{{ c.active }}</div> -->
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+<!-- <mat-card class="card" *ngFor="let c of medicines">
+
+  <img mat-card-image [src]="c.image" />
+  <mat-card-header>
+    <mat-card-title>{{ c.productId }}</mat-card-title>
+    <mat-card-title>{{ c.name }}</mat-card-title>
+    <mat-card-title>{{ c.price | currency: "INR" }}</mat-card-title>
+    <mat-card-title>{{ c.offer }}</mat-card-title>
+    <mat-card-title>{{ c.sellerName }}</mat-card-title>
+    <mat-card-title>{{ c.description }}</mat-card-title>
+  </mat-card-header>
+</mat-card> -->

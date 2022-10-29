@@ -1,0 +1,91 @@
+<mat-card>
+  <h1>Add New Medicine</h1>
+  <mat-card-content>
+    <div class="div bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form (ngSubmit)="formSubmit()">
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Medicine Name</mat-label>
+              <input
+                required
+                type="text"
+                name="Medicine Name"
+                matInput
+                placeholder="Enter Here"
+                [(ngModel)]="medicine.name"
+              />
+            </mat-form-field>
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Price</mat-label>
+              <input
+                required
+                type="text"
+                name="Price"
+                matInput
+                placeholder="Enter Here"
+                [(ngModel)]="medicine.price"
+              />
+            </mat-form-field>
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Seller Name</mat-label>
+              <input
+                required
+                type="text"
+                name="Seller Name"
+                matInput
+                placeholder="Enter Here"
+                [(ngModel)]="medicine.sellerName"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Offer</mat-label>
+              <input
+                required
+                type="text"
+                name="Offer"
+                matInput
+                placeholder="Enter Here"
+                [(ngModel)]="medicine.offer"
+              />
+            </mat-form-field>
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Image Url</mat-label>
+              <input
+                mat-input
+                type="text"
+                name="image"
+                matInput
+                placeholder="Enter Here"
+                [(ngModel)]="medicine.image"
+              />
+            </mat-form-field>
+            <mat-form-field class="form" appearance="outline">
+              <mat-label>Product Description</mat-label>
+              <textarea
+                required
+                name="Product Description"
+                matInput
+                placeholder="Enter Description"
+                [(ngModel)]="medicine.description"
+              ></textarea>
+            </mat-form-field>
+            <div class="div container text-center">
+              <button mat-raised-button color="primary">Add</button>
+            </div>
+            <mat-slide-toggle
+              [(ngModel)]="medicine.active"
+              name="active"
+              class="example-margin"
+              color="primary"
+              checked="false"
+            >
+              Publish
+            </mat-slide-toggle>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

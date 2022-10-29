@@ -1,0 +1,8 @@
+.card {
+  max-width: 100%;
+  max-height: fit-content;
+  margin-top: 0.5%;
+}
+button {
+  margin: 2.5px;
+}
